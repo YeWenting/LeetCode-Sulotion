@@ -5,7 +5,7 @@
 ## File Organization
 
 - /src - the python solution code
-- [LeetCode Solution.md](https://github.com/YeWenting/LeetCode-Sulotion/blob/master/Leetcode%20Solution.md) - the solution report
+- [solution.md](https://github.com/YeWenting/LeetCode-Sulotion/blob/master/solution.md) - the solution report
 
 ## Contribution
 
