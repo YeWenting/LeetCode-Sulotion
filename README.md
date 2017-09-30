@@ -1,12 +1,12 @@
-#LeetCode Solution
+# LeetCode Solution
 
-These days I'm preparing for several internship interviews, so I'm doing the execrise on the LeetCode.
+> My LeetCode Solution code
 
-##File Organization
+## File Organization
 
-"/src" - the python solution code
-"LeetCode Solution.md" - the solution report
+- /src - the python solution code
+- [LeetCode Solution.md](https://github.com/YeWenting/LeetCode-Sulotion/blob/master/Leetcode%20Solution.md) - the solution report
 
-##Contribution
+## Contribution
 
-If you are interested in sharing your code here, feel free to contact me or just make a PR.
+If you are interested in sharing your code here, feel free to contact [me](mailto:wenting_ye@bupt.edu.cn) or just make a PR.
