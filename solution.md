@@ -44,4 +44,13 @@ At first, when I encounter the *, I will iterate which part it will replace. But
       - It's clearly that there won't be any extra '(' in the longest valid string, so this '(' should only be before the longest valid string. But if it's not at i - f[i - 1] - i, then this string will be invalid.
   - Histroy
     - Attempt I: forget to check whether the index is valid
-  - ​
+
+
+
+### P55 Jump Game
+
+- Attempt I
+  - Define a set *f* to be the set of reachable index, and iterate the array from start. If this index is in the *f*, then we can update the *f* since we can perform *jump* operation here.
+  - This method TLE in the last data
+- Attempt II
+  - After a little consideration, I found out we don't need to maintain this *f* and just store the *farest* index we can arrive. It saves the operation of maintain *f*, and cut the time complexity from O(nm) to O(n) (m is the average of MAX_JUMP)
