@@ -62,3 +62,10 @@ More reading see [here](https://rg03.wordpress.com/2007/04/21/semantics-of-pytho
   - After a little consideration, I found out we don't need to maintain this *f* and just store the *farest* index we can arrive. It saves the operation of maintain *f*, and cut the time complexity from O(nm) to O(n) (m is the average of MAX_JUMP)
 - This simple solution can even beat 89.5% solution… (
 - The fastest solution search from the right to make it faster, it's smart.
+
+### P141&P142
+
+- Purpose: detect and identify the loop in linklist
+- **BUG**
+  - check if the head is nullptr
+  - consider the boundry scenario (one node, no loop)
