@@ -69,3 +69,22 @@ More reading see [here](https://rg03.wordpress.com/2007/04/21/semantics-of-pytho
 - **BUG**
   - check if the head is nullptr
   - consider the boundry scenario (one node, no loop)
+
+### P218 The Skyline Problem
+
+- Kind of like simulation
+- Maintain a heap, which stores the (height, x_covariate) of the upper-right node of building who we are examining
+- We only care about the highest building at one time
+- If the current new building is far from the highest, it means current highest building will not affect by the future high building, so add it to the result and delete it from the heap, and also delete the one that control by it.
+- If the current new building is under the reach of highest
+  - add it to the heap (add all the building starting at the same x-covariate)
+  - if the new height is higher than the old maxinum, then add to the result
+
+### P319 Bulb Switcher
+
+- Oberser the data, if Bulb *i* is still open, *i* has odd number of factors.
+
+### P7 Reverse Interger
+
+- I found in the c++, the mod of a negtive is not like what I thought before. I thought the remainder is always a non-negative number, however it isn't. Let says -1 / 3 = -0.333… then the quoitent is -0, and the remainder is -1. So both *a* and *-a*, they will have the same quotient and the remainder.
+
