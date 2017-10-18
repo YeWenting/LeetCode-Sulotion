@@ -1,4 +1,10 @@
-# Leetcode Solution
+## Tips
+
+1. Don't have the idea? See **more examples**!
+2. The first thing is to examine special case of input (e.g. **len** is too short)
+3. Watch your **index** when using list!!
+
+## Leetcode Solution
 
 ### P4 Median of Two Sorted Arrays
 
@@ -88,3 +94,28 @@ More reading see [here](https://rg03.wordpress.com/2007/04/21/semantics-of-pytho
 
 - I found in the c++, the mod of a negtive is not like what I thought before. I thought the remainder is always a non-negative number, however it isn't. Let says -1 / 3 = -0.333… then the quoitent is -0, and the remainder is -1. So both *a* and *-a*, they will have the same quotient and the remainder.
 
+### p42 Trapping rain water (*)
+
+- This is quite a interesting problem.
+- Attempt I:
+  - I think the water could only be stored in the near neighboor, which is limited by the *peak point*
+  - However, it's clearly wrong, like [5, 1, 2, 1, 2, 5]. The water can store in the two 5
+- Attempt II:
+  - I look the solution, find out for each bar, the maxinum of water is determined by the *min{l[i], r[i]}*, which l[i] is maxinum in 0..i, and r[i] is maxinum in i..n-1.
+  - Easily accept by some preprocess
+- Other solution:
+  - Stack: Store all the *critical bar*
+    - while the height[i] > stack_top
+      - stack.pop()
+      - add the answer (since the lower side has been determined)
+    - push the height[i] to the stack
+    - Only one loop
+  - Two pointer
+    - In Attempt II we know that the answer is determined by the *l, r*. Now we consider not to calculate all of the *l, r*
+    - Initialize i = 0, j = -1
+    - Update the l[i] and r[j]
+    - if l[i] < r[j]
+      - so l[i] **must** lower than the r[i], so the ans is determined by leftside
+      - Add to the answer and l++
+    - Same thing happens in another situation
+    - Only one loop
